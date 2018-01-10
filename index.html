@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Trivia Game</title>
+
+	<!-- Styling Links -->
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+
+<body>
+	
+	<!-- Link jQuery -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<!-- Game Title -->
+	<div class="page-header game-title">
+	  <h1>Sports Trivia</h1>
+	</div>
+
+
+
+	<!-- Game Panel -->
+	<div class="jumbotron question-section">
+		<button type="button" id="playButton" onclick="triviaGame()">Play!</button>
+
+		<br>
+		<br>
+
+		<p>Time Remaining: <span id="timer"></span></p>
+
+	 	<p id="questionParagraph">Question 1: How many NBA teams has LebronJames played for?</p>
+
+			<table class="answer-table" width= "600" border="1">
+				<tbody>
+					<tr>
+						<td><input type="radio" name="radio1.1" id="ans1.1" value="radio">
+							<label for="radio">1</label></td>
+						<td><input type="radio" name="radio1.2" id="ans1.2" value="radio">
+							<label for="radio">2</label></td>
+					</tr>
+					<tr>
+						<td><input type="radio" name="radio1.3" id="ans1.3" value="radio">
+							<label for="radio">3</label></td>
+						<td><input type="radio" name="radio1.4" id="ans1.4" value="radio">
+							<label for="radio">4</label></td>
+					</tr>
+				</tbody>
+			</table>
+
+		<p id="questionParagraph">Question 2: What year did Andre Agassi retire from professional tennis?</p>
+
+			<table class="answer-table" width= "600" border="1">
+				<tbody>
+					<tr>
+						<td><input type="radio" name="radio2.1" id="ans2.1" value="radio">
+							<label for="radio">2000</label></td>
+						<td><input type="radio" name="radio2.2" id="ans2.2" value="radio">
+							<label for="radio">2001</label></td>
+					</tr>
+					<tr>
+						<td><input type="radio" name="radio2.3" id="ans2.3" value="radio">
+							<label for="radio">2006</label></td>
+						<td><input type="radio" name="radio2.4" id="ans2.4" value="radio">
+							<label for="radio">2010</label></td>
+					</tr>
+				</tbody>
+			</table>
+
+		<p id="questionParagraph">Question 3: How many teams are in the NHL?</p>
+
+			<table class="answer-table" width= "600" border="1">
+				<tbody>
+					<tr>
+						<td><input type="radio" name="radio3.1" id="ans3.1" value="radio">
+							<label for="radio">10</label></td>
+						<td><input type="radio" name="radio3.2" id="ans3.2" value="radio">
+							<label for="radio">11</label></td>
+					</tr>
+					<tr>
+						<td><input type="radio" name="radio3.3" id="ans3.3" value="radio">
+							<label for="radio">30</label></td>
+						<td><input type="radio" name="radio3.4" id="ans3.4" value="radio">
+							<label for="radio">31</label></td>
+					</tr>
+				</tbody>
+			</table>	
+
+		<p id="questionParagraph">Question 4: How many times have the Miami Heat won the NBA Championship?</p>
+
+			<table class="answer-table" width= "600" border="1">
+				<tbody>
+					<tr>
+						<td><input type="radio" name="radio4.1" id="ans4.1" value="radio">
+							<label for="radio">3</label></td>
+						<td><input type="radio" name="radio4.2" id="ans4.2" value="radio">
+							<label for="radio">2</label></td>
+					</tr>
+					<tr>
+						<td><input type="radio" name="radio4.3" id="ans4.3" value="radio">
+							<label for="radio">1</label></td>
+						<td><input type="radio" name="radio4.4" id="ans4.4" value="radio">
+							<label for="radio">0</label></td>
+					</tr>
+				</tbody>
+			</table>
+
+		<p id="questionParagraph">Question 5: Is Leonel Messi right-footed?</p>
+
+			<table class="answer-table" width= "600" border="1">
+				<tbody>
+					<tr>
+						<td><input type="radio" name="radio5.1" id="ans5.1" value="radio">
+							<label for="radio">True</label></td>
+						<td><input type="radio" name="radio5.2" id="ans5.2" value="radio">
+							<label for="radio">False</label></td>
+					</tr>
+				</tbody>
+			</table>	
+
+		<p id="questionParagraph">Question 6: What male tennis player has won the most Grand Slam titles?</p>
+
+			<table class="answer-table" width= "600" border="1">
+				<tbody>
+					<tr>
+						<td><input type="radio" name="radio6.1" id="ans6.1" value="radio">
+							<label for="radio">Andre Agassi</label></td>
+						<td><input type="radio" name="radio6.2" id="ans6.2" value="radio">
+							<label for="radio">Rodger Rederer</label></td>
+					</tr>
+					<tr>
+						<td><input type="radio" name="radio6.3" id="ans6.3" value="radio">
+							<label for="radio">Andy Murray</label></td>
+						<td><input type="radio" name="radio6.4" id="ans6.4" value="radio">
+							<label for="radio">Rafael Nadal</label></td>
+					</tr>
+				</tbody>
+			</table>
+
+		<button type="button" id="submitButton" onclick="triviaGame()">Submit</button>
+
+	</div>
+
+
+<!-- //Questions:
+	// How many NBA teams has LebronJames played for?
+	// 1
+	// *2
+	// 3
+	// 4
+	
+	// What year did Andre Agassi retire from professional tennis?
+	// 2000
+	// 2001
+	// *2006
+	// 2010
+
+	// How many teams are in the NHL?
+	// 10
+	// 11
+	// 30
+	// *31
+
+	// How many times have the Miami Heat won the NBA Championship?
+	// *3
+	// 2
+	// 1
+	// 0
+
+	// Is Leonel Messi right-footed?
+	// True
+	// *False
+
+	// What male tennis player has won the most Grand Slam titles?
+	// Andre Agassi
+	// *Rodger Federer
+	// Rafael Nadal
+	// Andy Roddick
+
+	// How many holes are there in a full round of golf?
+	// 10
+	// 11
+	// 15
+	// *18
+
+	// How many soccer players should be on the field at the same time?
+	// 10
+	// 11
+	// 20
+	// *22 -->
+
+
+
+	<!-- Link my JavaScript -->
+	<script type="text/javascript" src="assets/javascript/app.js"></script>
+
+</body>
+
+</html>

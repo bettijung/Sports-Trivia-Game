@@ -1,0 +1,37 @@
+body {
+	background-image: url(http://wwwtestsportsclubs.com/wp-content/uploads/2017/04/RTEmagicC_Masters_sports.png.png); ;
+	background-repeat: no-repeat;
+	background-size: 95% 500px;
+	background-position: center top;
+
+}
+.game-title {
+	font-size: 35px;
+	font-weight: 500;
+	height: 50px;
+	background-color: royalblue;
+	color: white;
+	text-align: center;
+	width: 40%;
+	margin: auto;
+	margin-bottom: 20px;
+	border: none;
+	opacity: 0.9;
+}
+
+.question-section {
+	width: 70%;
+	margin: auto;
+	padding-bottom: 10px;
+	background-color: lightgrey;
+	opacity: 0.9;
+	text-align: center;
+
+}
+
+.question-section p {
+	text-align: center;
+	font-size: 18px;
+}
+
+
