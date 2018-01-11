@@ -16,131 +16,152 @@
 	<!-- Link jQuery -->
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+<!-- GAME -->
 	<!-- Game Title -->
 	<div class="page-header game-title">
 	  <h1>Sports Trivia</h1>
 	</div>
 
 
-
 	<!-- Game Panel -->
 	<div class="jumbotron question-section">
-		<button type="button" id="playButton" onclick="triviaGame()">Play!</button>
-
+		<button type="button" id="playButton" onclick="">Play!</button>
 		<br>
 		<br>
 
-		<p>Time Remaining: <span id="timer"></span></p>
+		<div id="result">
+		</div>
 
-	 	<p id="questionParagraph">Question 1: How many NBA teams has LebronJames played for?</p>
+	 	<form id="questions">
 
-			<table class="answer-table" width= "600" border="1">
-				<tbody>
-					<tr>
-						<td><input type="radio" name="radio1.1" id="ans1.1" value="radio">
-							<label for="radio">1</label></td>
-						<td><input type="radio" name="radio1.2" id="ans1.2" value="radio">
-							<label for="radio">2</label></td>
-					</tr>
-					<tr>
-						<td><input type="radio" name="radio1.3" id="ans1.3" value="radio">
-							<label for="radio">3</label></td>
-						<td><input type="radio" name="radio1.4" id="ans1.4" value="radio">
-							<label for="radio">4</label></td>
-					</tr>
-				</tbody>
-			</table>
+			<p id="timerText">Time Remaining: <span id="timer"></span></p>
 
-		<p id="questionParagraph">Question 2: What year did Andre Agassi retire from professional tennis?</p>
+			<br>
 
-			<table class="answer-table" width= "600" border="1">
-				<tbody>
-					<tr>
-						<td><input type="radio" name="radio2.1" id="ans2.1" value="radio">
-							<label for="radio">2000</label></td>
-						<td><input type="radio" name="radio2.2" id="ans2.2" value="radio">
-							<label for="radio">2001</label></td>
-					</tr>
-					<tr>
-						<td><input type="radio" name="radio2.3" id="ans2.3" value="radio">
-							<label for="radio">2006</label></td>
-						<td><input type="radio" name="radio2.4" id="ans2.4" value="radio">
-							<label for="radio">2010</label></td>
-					</tr>
-				</tbody>
-			</table>
+		 	<p>Question 1: How many NBA teams has LebronJames played for?</p>
+				
+				<div>
+					<input type="radio" id="ans1.1" 
+					  	name="q1" value="1">
+					    <label for="ans1.1">1</label>
 
-		<p id="questionParagraph">Question 3: How many teams are in the NHL?</p>
+					<input type="radio" id="ans1.2" 
+					  	name="q1" value="2">
+					    <label for="ans1.2">2</label>
 
-			<table class="answer-table" width= "600" border="1">
-				<tbody>
-					<tr>
-						<td><input type="radio" name="radio3.1" id="ans3.1" value="radio">
-							<label for="radio">10</label></td>
-						<td><input type="radio" name="radio3.2" id="ans3.2" value="radio">
-							<label for="radio">11</label></td>
-					</tr>
-					<tr>
-						<td><input type="radio" name="radio3.3" id="ans3.3" value="radio">
-							<label for="radio">30</label></td>
-						<td><input type="radio" name="radio3.4" id="ans3.4" value="radio">
-							<label for="radio">31</label></td>
-					</tr>
-				</tbody>
-			</table>	
+					<input type="radio" id="ans1.3" 
+					  	name="q1" value="3">
+					    <label for="ans1.3">3</label>
 
-		<p id="questionParagraph">Question 4: How many times have the Miami Heat won the NBA Championship?</p>
+					<input type="radio" id="ans1.4" 
+					  	name="q1" value="4">
+					    <label for="ans1.4">4</label>
+				</div>
+				<br>
 
-			<table class="answer-table" width= "600" border="1">
-				<tbody>
-					<tr>
-						<td><input type="radio" name="radio4.1" id="ans4.1" value="radio">
-							<label for="radio">3</label></td>
-						<td><input type="radio" name="radio4.2" id="ans4.2" value="radio">
-							<label for="radio">2</label></td>
-					</tr>
-					<tr>
-						<td><input type="radio" name="radio4.3" id="ans4.3" value="radio">
-							<label for="radio">1</label></td>
-						<td><input type="radio" name="radio4.4" id="ans4.4" value="radio">
-							<label for="radio">0</label></td>
-					</tr>
-				</tbody>
-			</table>
+			<p>Question 2: What year did Andre Agassi retire from professional tennis?</p>
 
-		<p id="questionParagraph">Question 5: Is Leonel Messi right-footed?</p>
+				<div>
+					<input type="radio" id="ans2.1" 
+					  	name="q2" value="2000">
+					    <label for="ans2.1">2000</label>
 
-			<table class="answer-table" width= "600" border="1">
-				<tbody>
-					<tr>
-						<td><input type="radio" name="radio5.1" id="ans5.1" value="radio">
-							<label for="radio">True</label></td>
-						<td><input type="radio" name="radio5.2" id="ans5.2" value="radio">
-							<label for="radio">False</label></td>
-					</tr>
-				</tbody>
-			</table>	
+					<input type="radio" id="ans2.2" 
+					  	name="q2" value="2001">
+					    <label for="ans2.2">2001</label>
 
-		<p id="questionParagraph">Question 6: What male tennis player has won the most Grand Slam titles?</p>
+					<input type="radio" id="ans2.3" 
+					  	name="q2" value="2006">
+					    <label for="ans2.3">2006</label>
 
-			<table class="answer-table" width= "600" border="1">
-				<tbody>
-					<tr>
-						<td><input type="radio" name="radio6.1" id="ans6.1" value="radio">
-							<label for="radio">Andre Agassi</label></td>
-						<td><input type="radio" name="radio6.2" id="ans6.2" value="radio">
-							<label for="radio">Rodger Rederer</label></td>
-					</tr>
-					<tr>
-						<td><input type="radio" name="radio6.3" id="ans6.3" value="radio">
-							<label for="radio">Andy Murray</label></td>
-						<td><input type="radio" name="radio6.4" id="ans6.4" value="radio">
-							<label for="radio">Rafael Nadal</label></td>
-					</tr>
-				</tbody>
-			</table>
+					<input type="radio" id="ans2.4" 
+					  	name="q2" value="2010">
+					    <label for="ans2.4">2010</label>
+				</div>
+				<br>
 
-		<button type="button" id="submitButton" onclick="triviaGame()">Submit</button>
+			<p>Question 3: How many teams are in the NHL?</p>
+
+				<div>
+					<input type="radio" id="ans3.1" 
+					  	name="q3" value="10">
+					    <label for="ans3.1">10</label>
+
+					<input type="radio" id="ans3.2" 
+					  	name="q3" value="11">
+					    <label for="ans3.2">11</label>
+
+					<input type="radio" id="ans3.3" 
+					  	name="q3" value="30">
+					    <label for="ans3.3">30</label>
+
+					<input type="radio" id="ans3.4" 
+					  	name="q3" value="31">
+					    <label for="ans3.4">31</label>
+				</div>
+				<br>	
+
+			<p>Question 4: How many times have the Miami Heat won the NBA Championship?</p>
+
+				<div>
+					<input type="radio" id="ans4.1" 
+					  	name="q4" value="3">
+					    <label for="ans4.1">3</label>
+
+					<input type="radio" id="ans4.2" 
+					  	name="q4" value="2">
+					    <label for="ans4.2">2</label>
+
+					<input type="radio" id="ans4.3" 
+					  	name="q4" value="1">
+					    <label for="ans4.3">1</label>
+
+					<input type="radio" id="ans4.4" 
+					  	name="q4" value="0">
+					    <label for="ans4.4">0</label>
+				</div>
+				<br>
+
+			<p>Question 5: Is Leonel Messi right-footed?</p>
+				
+				<div>
+					<input type="radio" id="ans5.1" 
+					  	name="q5" value="True">
+					    <label for="ans5.1">True</label>
+
+					<input type="radio" id="ans5.2" 
+					  	name="q5" value="False">
+					    <label for="ans5.2">False</label>
+				</div>
+				<br>
+
+			<p>Question 6: What male tennis player has won the most Grand Slam titles?</p>
+	
+				<div>
+					<input type="radio" id="ans6.1" 
+					  	name="q6" value="Andre Agassi">
+					    <label for="ans6.1">Andre Agassi</label>
+
+					<input type="radio" id="ans6.2" 
+					  	name="q6" value="Rodger Federer">
+					    <label for="ans6.2">Rodger Federer</label>
+
+					<input type="radio" id="ans6.3" 
+					  	name="q6" value="Andy Murray">
+					    <label for="ans6.3">Andy Murray</label>
+
+					<input type="radio" id="ans6.4" 
+					  	name="q6" value="Rafael Nadal">
+					    <label for="ans6.4">Rafael Nadal</label>
+				</div>		
+			
+			<br>
+
+			<div>
+				<button type="button" id="submitButton" onclick="fQuestions()">Submit</button>
+			</div>
+
+		</form>
 
 	</div>
 
