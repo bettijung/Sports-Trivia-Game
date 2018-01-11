@@ -11,25 +11,27 @@ $(document).ready(function() {
 		$("#questions").show();
 		$("#result").hide();
 		$("#playButton").hide();
-		resetGame();
+		runTimer();
 	})
 
 
-//Create values that will track questions aanswered correctly and incorrectly, or unanswered.
-	var correct = 0;
-	var incorrect = 0;
-	var unanswered = 0;
-	
-
-//Function to reset the game
-	function resetGame() {
-		var correct = 0;
-		var incorrect = 0;
-		var unanswered = 0;
-	}	
 
 // Game function.
-	function fQuestions(){
+	function triviaGame(){
+
+		//Create values that will track questions aanswered correctly and incorrectly, or unanswered.
+			var correct = 0;
+			var incorrect = 0;
+			var unanswered = 0;
+
+		//Function to reset the game
+			function resetGame() {
+				var correct = 0;
+				var incorrect = 0;
+				var unanswered = 0;
+		}	
+
+
 	var q1Correct = document.getElementById("ans1.2");
 	var	q1Incorrect = document.getElementById("ans1.1");
 	var q2Correct = document.getElementById("ans2.3");
@@ -70,8 +72,6 @@ $(document).ready(function() {
 			{ incorrect ++;}
 	
 
-	
-				
 		// Display results.
 			$("#questions").hide();
 			$("#result").show();
@@ -80,11 +80,35 @@ $(document).ready(function() {
 			var resultHTML = "Questions Correct: " + correct + "<br>" +
 								"Questions Incorrect: " + incorrect + "<br>" +
 								"Questions Unanswered: " + unanswered;
-				
 			resultDOM.innerHTML = resultHTML;
 
 
 	}
+
+
+//Timer
+	var number = 60;
+	var intervalId;
+	function runTimer () {
+		intervalId = setInterval(decrement, 1000);
+	}
+
+	function decrement () {
+		number--;
+	
+		$("#timer").html("<h2>" + number + "</h2>");
+
+		if (number === 0) {
+			stop();
+			triviaGame();
+		}
+	}
+
+	function stop () {
+		clearInterval(intervalId);
+	}
+
+runTimer();
 
 
 
